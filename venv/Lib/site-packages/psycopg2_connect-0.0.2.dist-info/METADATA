@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: psycopg2-connect
+Version: 0.0.2
+Summary: A lightweight package for connecting to postgres servers.
+Home-page: https://github.com/andrewdircks/psycopg2-connect
+Author: Andrew Dircks
+Author-email: abd93@cornell.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: psycopg2
+
+# Psycopg2 Connect
+
+Connect to postgres servers using `psycopg2`.
+
+## Install
+
+`pip install psycopg2-connect`
+
+## Usage
+
+```
+from psycopg2_connect import connect
+conn = connect(user, host, port, database, password)
+```
+
