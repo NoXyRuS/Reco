@@ -1,0 +1,10 @@
+# Ignorar el entorno virtual
+venv/
+# Ignorar archivos de compilación de Python
+__pycache__/
+*.pyc
+# Ignorar archivos de configuración de IDEs y editores
+.vscode/
+.idea/
+# Ignorar archivos de entorno de Jupyter
+.ipynb_checkpoints/
