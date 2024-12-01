@@ -23,7 +23,7 @@ CORS(app)
 def video_feed():
     return Response(generar_video_biometrico(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
-
+#Si
 
 # Configuración de la conexión a la base de datos
 def conectar_bd():
