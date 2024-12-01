@@ -85,6 +85,16 @@ def obtener_usuario(imagen_facial):
     connection.close()
     return None
 
+def eliminar_archivo():
+    archivo = 'temp.npy'
+
+    # Verificar si el archivo existe antes de intentar eliminarlo
+    if os.path.exists(archivo):
+        os.remove(archivo)
+        print(f"El archivo {archivo} ha sido eliminado.")
+    else:
+        print(f"El archivo {archivo} no existe.")
+
 @app.route('/usuario_recibido', methods=['GET'])
 def usuario_recibido():
     #global cut
@@ -94,7 +104,7 @@ def usuario_recibido():
         return jsonify({"error": "No se ha encontrado rostro recortado."}), 400
 
     usuario = obtener_usuario(cut)
-
+    eliminar_archivo()
     if usuario:
         return jsonify({
             "status": "success",
